@@ -18,6 +18,14 @@ function addToCollection(title, artist, yearPublished) {
     return album;
 }
 
+function showCollection(collectArray) {
+    console.log('Collection Length: ', collectArray.length);
+
+    for (let album of collectArray) {
+        console.log(`${album.title} by ${album.artist} published in ${album.yearPublished}`);
+    }
+
+}
 
 
 //-----------TESTS-----------//
@@ -31,3 +39,5 @@ console.log('Adding new album ->', addToCollection('Antifractals','Subtronics', 
 console.log('Adding new album ->', addToCollection('An Insatiable High', 'Masayoshi Takanaka', 1977));
 console.log('The Collection ->',  collection);
 
+//Testing showCollection
+showCollection(collection);
